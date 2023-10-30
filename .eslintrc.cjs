@@ -14,5 +14,14 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
+    'no-console': ['warn'],
+    'no-empty': ['error'],
+    'no-empty-function': ['error'],
+    'eqeqeq': ['error'],
+    'array-bracket-spacing': ['error', 'never'],
+    'camelcase': ['error'],
+    'jsx-quotes': ['error', 'prefer-single'],
+    'semi': ['error', 'never'],
+    'indent': ['error', 2]
   },
 }
