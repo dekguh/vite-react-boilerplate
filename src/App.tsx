@@ -4,7 +4,7 @@ import './index.css'
 function App() {
   return (
     <div>
-      tes
+      <button className='btn'>test</button>
     </div>
   )
 }
