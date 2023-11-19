@@ -2,9 +2,9 @@ import React from 'react'
 import { IButtonProps } from './typed.d'
 
 const Button : React.FC<IButtonProps> = (props) => {
-  const { children } = props
+  const { children, rest } = props
   return (
-    <button>{children}</button>
+    <button data-testid='button' {...rest}>{children}</button>
   )
 }
 
