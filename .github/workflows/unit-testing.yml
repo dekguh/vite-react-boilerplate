@@ -13,14 +13,18 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
-      - name: Execute Unit Tests
-      - run: npm ci
-	      - run: npm run test:unit
+          cache: 'npm'
+      - name: install and build
+        run: |
+          npm ci
+          npm run build --if-present
+      - name: lint
+        run: npm run lint
+      - name: run unit testing
+        run: npm run test:unit
