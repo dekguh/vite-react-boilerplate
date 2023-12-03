@@ -1,10 +1,12 @@
 import './index.css'
+import AppProvider from './providers/AppProvider'
+import AppRoutes from './routes'
 
 function App() {
   return (
-    <div>
-      <button className='btn'>test</button>
-    </div>
+    <AppProvider>
+      <AppRoutes />
+    </AppProvider>
   )
 }
 
