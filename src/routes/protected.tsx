@@ -6,5 +6,9 @@ export const protectedRoutes = [
   {
     path: '/',
     element: <OverviewPage />
+  },
+  {
+    path: '/other',
+    element: <>other page</>
   }
 ]
