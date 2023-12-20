@@ -6,5 +6,9 @@ export const publicRoutes = [
   {
     path: 'auth/*',
     element: <AuthRoutes />
+  },
+  {
+    path: '/',
+    element: <></>
   }
 ]
