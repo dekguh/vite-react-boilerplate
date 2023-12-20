@@ -4,8 +4,17 @@ import { useRoutes } from 'react-router-dom'
 import { publicRoutes } from './public'
 import { protectedRoutes } from './protected'
 
+// REDUX
+import { useSelector } from 'react-redux'
+import { authSelect } from '@/features/auth/stores/authSlice'
+import useAuth from '@/hooks/useAuth'
+
 const AppRoutes = () => {
-  const element = useRoutes([...publicRoutes,...protectedRoutes])
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const authentication = useAuth()
+  const authState = useSelector(authSelect)
+
+  const element = useRoutes(authState?.isLoggedIn ? protectedRoutes : publicRoutes)
 
   return element
 }
