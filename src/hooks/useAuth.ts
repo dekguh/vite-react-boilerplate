@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 // REDUX
 import { useDispatch } from 'react-redux'
-import { updateIsLogged } from '@/features/auth/stores/authSlice'
+import { authSelect, updateIsLogged } from '@/features/auth/stores/authSlice'
 
 // UTILS
 import { getStorageJwt } from '@/utils/storage'
@@ -11,23 +11,21 @@ import { getStorageJwt } from '@/utils/storage'
 const useAuth = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const [isLogged, setIsLogged] = useState<boolean>(false)
+  const location = useLocation()
 
   useEffect(() => {
     const jwtToken = getStorageJwt()
     
     if (jwtToken) {
-      setIsLogged(true)
       dispatch(updateIsLogged(true))
     }
     else {
-      setIsLogged(false)
       dispatch(updateIsLogged(false))
-      navigate('/auth/sign-in')
+      if (!location.pathname.includes('/auth')) navigate('/auth/sign-in')
     }
   }, [])
 
-  return isLogged
+  return authSelect
 }
 
 export default useAuth
