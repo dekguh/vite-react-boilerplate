@@ -11,7 +11,9 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test:unit": "vitest",
-    "test:unit-ui": "vitest --ui"
+    "test:unit-ui": "vitest --ui",
+    "test:e2e": "npx playwright test",
+    "test:e2e-ui": "npx playwright test --ui"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
@@ -23,6 +25,7 @@
     "react-router-dom": "^6.19.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.40.1",
     "@storybook/addon-essentials": "^7.5.3",
     "@storybook/addon-interactions": "^7.5.3",
     "@storybook/addon-links": "^7.5.3",
@@ -34,6 +37,7 @@
     "@tailwindcss/typography": "^0.5.10",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.1.2",
+    "@types/node": "^20.10.5",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.0.0",

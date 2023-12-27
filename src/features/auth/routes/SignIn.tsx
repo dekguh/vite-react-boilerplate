@@ -15,7 +15,7 @@ export const SignIn = () => {
 
   return (
     <div>
-      <button onClick={handleLoginClick}>login</button>
+      <button data-testid='btnLoginId' onClick={handleLoginClick}>login</button>
     </div>
   )
 }
