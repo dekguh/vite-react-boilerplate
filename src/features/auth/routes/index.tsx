@@ -6,8 +6,8 @@ import { SignUp } from './SignUp'
 const AuthRoutes = () => {
   return (
     <Routes>
-      <Route path='sign-in' element={<SignIn />} />
-      <Route path='sign-up' element={<SignUp />} />
+      <Route element={<SignIn />} path='sign-in' />
+      <Route element={<SignUp />} path='sign-up' />
     </Routes>
   )
 }
