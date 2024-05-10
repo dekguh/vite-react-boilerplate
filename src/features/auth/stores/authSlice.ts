@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
+
 import { IAuthState } from './typed'
+
 import { RootState } from '@/stores/storeGlobal'
 
 const initialState : IAuthState = {

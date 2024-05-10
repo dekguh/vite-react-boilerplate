@@ -3,14 +3,17 @@
  * 
  */
 
-import { updateIsLogged } from '@/features/auth/stores/authSlice'
-import { clearStorageJwt } from '@/utils/storage'
 import { fetchBaseQuery } from '@reduxjs/toolkit/query'
 import type {
   BaseQueryFn,
   FetchArgs,
   FetchBaseQueryError,
 } from '@reduxjs/toolkit/query'
+
+import { updateIsLogged } from '@/features/auth/stores/authSlice'
+
+import { clearStorageJwt } from '@/utils/storage'
+
 import { Mutex } from 'async-mutex'
 
 const mutex = new Mutex()

@@ -1,6 +1,7 @@
-import { render, screen } from '@testing-library/react'
-import { expect, test, describe } from 'vitest'
 import Button from './Button'
+
+import { expect, test, describe } from 'vitest'
+import { render, screen } from '@testing-library/react'
 
 describe('Button unit testing', () => {
   test('Button should rendered', () => {

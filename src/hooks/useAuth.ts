@@ -1,12 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 import { useLocation, useNavigate } from 'react-router-dom'
 
-// REDUX
-import { useDispatch } from 'react-redux'
 import { authSelect, updateIsLogged } from '@/features/auth/stores/authSlice'
 
-// UTILS
 import { getStorageJwt } from '@/utils/storage'
 
 const useAuth = () => {

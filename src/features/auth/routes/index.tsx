@@ -1,6 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
 
-// COMPONENTS
 import { SignIn } from './SignIn'
 import { SignUp } from './SignUp'
 
