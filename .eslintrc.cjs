@@ -39,7 +39,8 @@ module.exports = {
           'custom-routes',
           'custom-stores',
           'custom-types',
-          'custom-utils'
+          'custom-utils',
+          'external'
         ],
         'custom-groups': {
           value: {
