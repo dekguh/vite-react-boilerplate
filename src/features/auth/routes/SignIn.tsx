@@ -1,6 +1,8 @@
-import { setStorageJwt } from '@/utils/storage'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
+import { setStorageJwt } from '@/utils/storage'
+
 import { updateIsLogged } from '../stores/authSlice'
 import { usePostSignInMutation } from '../api/authApi'
 

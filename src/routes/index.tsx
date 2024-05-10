@@ -1,11 +1,9 @@
+import { useSelector } from 'react-redux'
 import { useRoutes } from 'react-router-dom'
 
-// COMPONENTS
 import { publicRoutes } from './public'
 import { protectedRoutes } from './protected'
 
-// REDUX
-import { useSelector } from 'react-redux'
 import useAuth from '@/hooks/useAuth'
 
 const AppRoutes = () => {

@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { IButtonProps } from './typed.d'
 
 const Button : React.FC<IButtonProps> = (props) => {

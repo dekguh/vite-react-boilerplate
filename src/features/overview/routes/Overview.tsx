@@ -1,7 +1,9 @@
-import { updateIsLogged } from '@/features/auth/stores/authSlice'
-import { clearStorageJwt } from '@/utils/storage'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
+
+import { updateIsLogged } from '@/features/auth/stores/authSlice'
+
+import { clearStorageJwt } from '@/utils/storage'
 
 const Overview = () => {
   const navigate = useNavigate()
