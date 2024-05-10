@@ -62,6 +62,13 @@ module.exports = {
           '@/**'
         ]
       }
+    ],
+    'perfectionist/sort-jsx-props': [
+      'error',
+      {
+        type: 'alphabetical',
+        order: 'asc'
+      }
     ]
   },
 }
